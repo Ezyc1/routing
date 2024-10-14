@@ -37,10 +37,14 @@ const router = createRouter({
     },
     {
       path: '/users',
+      name: 'Användare',
       component: () => import("../views/UsersView.vue"),
-      meta: {
-        title: "users",
-      }
+    },
+    {
+      path: '/users/:id',
+      name: 'User view',
+      component: () => import("../views/SingleUserView.vue"),
+      props:true
     },
   ]
 })
