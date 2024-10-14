@@ -35,6 +35,13 @@ const router = createRouter({
         title: "404",
       }
     },
+    {
+      path: '/users',
+      component: () => import("../views/UsersView.vue"),
+      meta: {
+        title: "users",
+      }
+    },
   ]
 })
 router.beforeEach((to) => {
